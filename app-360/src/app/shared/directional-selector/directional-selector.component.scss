@@ -1,0 +1,10 @@
+.direction-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+button.active {
+  background-color: #1976d2;
+  color: white;
+}

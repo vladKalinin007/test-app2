@@ -1,0 +1,7 @@
+<div class="direction-buttons">
+  <button *ngFor="let dir of directions"
+          [class.active]="dir === current"
+          (click)="selectDirection(dir)">
+    {{ dir }}
+  </button>
+</div>

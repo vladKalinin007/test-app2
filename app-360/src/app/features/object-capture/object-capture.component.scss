@@ -1,0 +1,60 @@
+.device-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; // расстояние между телефоном и кнопками
+  margin-top: 2rem;
+}
+
+.device-frame {
+  width: 820px;
+  height: 380px;
+  background: #111;
+  border-radius: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  position: relative;
+}
+
+.screen {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: black;
+  overflow: hidden;
+}
+
+.external-controls {
+  display: flex;
+  gap: 1rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #555;
+    }
+
+    &:disabled {
+      background-color: #777;
+      cursor: not-allowed;
+    }
+  }
+}
+
+video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     // 📌 ключевая строка
+  z-index: 0;
+}

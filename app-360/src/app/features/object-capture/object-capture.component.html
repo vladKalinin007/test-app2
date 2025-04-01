@@ -1,0 +1,37 @@
+<div class="device-container">
+  <div class="device-frame">
+    <div class="screen">
+      <video #video muted playsinline></video>
+
+      <app-object-capture-overlay
+        [boundingBox]="currentBox"
+        [maskData]="currentMask"
+        [isAligned]="isAligned">
+      </app-object-capture-overlay>
+
+      <app-directional-selector
+        [current]="direction"
+        (directionChanged)="onDirectionChanged($event)">
+      </app-directional-selector>
+
+      <app-capture-button
+        (capture)="onCapture()">
+      </app-capture-button>
+
+      <div class="hint" *ngIf="!isAligned && isCameraOn">
+        Поместите объект точно в рамку
+      </div>
+    </div>
+  </div>
+
+  <!-- ВНЕ устройства -->
+  <div class="external-controls">
+    <button (click)="startCamera()" [disabled]="isCameraOn">Включить камеру</button>
+    <button (click)="stopCamera()" [disabled]="!isCameraOn">Выключить камеру</button>
+  </div>
+</div>
+
+<div>
+  <img #resultImage alt="" style="max-width: 100%; display: block; margin-top: 1rem;" />
+</div>
+
