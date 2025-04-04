@@ -1,0 +1,65 @@
+<main class="login-page">
+  <div class="login-page__header">
+    <div class="login-page__lang-switcher">
+      <select aria-label="Change language">
+        <option value="en">En</option>
+        <option value="de" selected>De</option>
+        <option value="fr">Fr</option>
+        <option value="it">It</option>
+      </select>
+    </div>
+  </div>
+
+  <section class="login-page__content">
+    <div class="login-page__logo" aria-hidden="true">
+      <img src="logo.svg" alt="" />
+    </div>
+
+    <h1 class="login-page__title">Sign in</h1>
+
+    <form class="login-form" novalidate>
+      <div class="login-form__field">
+        <label for="username" class="login-form__label">User name</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          class="login-form__input"
+          autocomplete="username"
+          required
+        />
+      </div>
+
+      <div class="login-form__field">
+        <label for="password" class="login-form__label">Password</label>
+        <div class="login-form__input-wrapper">
+          <input
+            id="password"
+            name="password"
+            type="password"
+            class="login-form__input"
+            autocomplete="current-password"
+            required
+          />
+          <button type="button" class="login-form__toggle-password" aria-label="Show password"></button>
+        </div>
+      </div>
+
+      <div class="login-form__error" role="alert">
+        <strong class="login-form__error-title">Login error</strong>
+        <span class="login-form__error-message">The username or password is incorrect.</span>
+      </div>
+
+      <div class="login-form__actions">
+        <label class="login-form__remember">
+          <input type="checkbox" name="remember" />
+          <span>Remember me</span>
+        </label>
+
+        <a href="/forgot-password" class="login-form__link">Forgot password?</a>
+      </div>
+
+      <button type="submit" class="login-form__submit">Log in</button>
+    </form>
+  </section>
+</main>

@@ -1,0 +1,18 @@
+.header {
+  background-color: #e5e5e5;
+  height: 50px;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.navigation-item {
+  margin-right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
